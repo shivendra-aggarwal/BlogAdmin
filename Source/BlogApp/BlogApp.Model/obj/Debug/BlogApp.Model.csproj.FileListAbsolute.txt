@@ -1,5 +1,0 @@
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Model\bin\Debug\BlogApp.Model.dll.config
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Model\bin\Debug\BlogApp.Model.dll
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Model\bin\Debug\BlogApp.Model.pdb
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Model\obj\Debug\BlogApp.Model.dll
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Model\obj\Debug\BlogApp.Model.pdb

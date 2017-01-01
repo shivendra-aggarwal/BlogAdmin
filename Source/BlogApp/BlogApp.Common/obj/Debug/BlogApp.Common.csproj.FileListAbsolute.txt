@@ -1,4 +1,0 @@
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Common\bin\Debug\BlogApp.Common.dll
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Common\bin\Debug\BlogApp.Common.pdb
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Common\obj\Debug\BlogApp.Common.dll
-D:\CodeBase\blogapp\Source\BlogApp\BlogApp.Common\obj\Debug\BlogApp.Common.pdb

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -15,13 +16,12 @@ namespace BlogApp.DAO.BlogContext
         public BlogContext()
             : base("Name=BlogContext")
         {
-            
+            Database.SetInitializer<BlogContext>(new DropCreateDatabaseIfModelChanges<BlogContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new FeatureConfiguration());
-            modelBuilder.Configurations.Add(new FeatureTypeConfiguration());
+            modelBuilder.Configurations.AddFromAssembly(Assembly.Load("BlogApp.DAO"));
         }
 
         public override int SaveChanges()
@@ -30,16 +30,16 @@ namespace BlogApp.DAO.BlogContext
                 .Where(x => x.Entity is AuditableEntity
                 && (x.State == EntityState.Added || x.State == EntityState.Modified));
 
-            foreach(var entry in modifiedEntries)
+            foreach (var entry in modifiedEntries)
             {
                 AuditableEntity entity = entry.Entity as AuditableEntity;
 
-                if(entity != null)
+                if (entity != null)
                 {
                     string identityName = Thread.CurrentPrincipal.Identity.Name;
                     DateTime now = DateTime.UtcNow;
 
-                    if(entry.State == EntityState.Added)
+                    if (entry.State == EntityState.Added)
                     {
                         entity.CreatedBy = identityName;
                         entity.CreatedDate = now;
