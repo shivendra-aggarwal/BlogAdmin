@@ -9,6 +9,6 @@ namespace BlogApp.Model.FeatureManagement
 {
     public class FeatureType : BaseEntity
     {
-        public string FeatureName { get; set; }
+        public string FeatureTypeName { get; set; }
     }
 }

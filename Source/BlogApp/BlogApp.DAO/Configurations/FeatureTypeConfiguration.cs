@@ -18,7 +18,7 @@ namespace BlogApp.DAO.Configurations
 
             HasKey(t => t.Identifier);
 
-            Property(t => t.FeatureName).
+            Property(t => t.FeatureTypeName).
                 HasMaxLength(200).
                 IsRequired().
                 HasColumnAnnotation(IndexAnnotation.AnnotationName,
