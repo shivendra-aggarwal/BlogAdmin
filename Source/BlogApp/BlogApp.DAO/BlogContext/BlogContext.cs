@@ -16,7 +16,7 @@ namespace BlogApp.DAO.BlogContext
         public BlogContext()
             : base("Name=BlogContext")
         {
-            Database.SetInitializer<BlogContext>(new DropCreateDatabaseIfModelChanges<BlogContext>());
+            //Database.SetInitializer<BlogContext>(new DropCreateDatabaseIfModelChanges<BlogContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

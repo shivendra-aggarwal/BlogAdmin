@@ -12,6 +12,7 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
+BlogApp.Admin.dll.config
 
 # Build results
 [Dd]ebug/
