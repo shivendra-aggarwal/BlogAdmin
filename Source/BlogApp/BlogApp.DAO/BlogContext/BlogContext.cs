@@ -21,7 +21,8 @@ namespace BlogApp.DAO.BlogContext
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.AddFromAssembly(Assembly.Load("BlogApp.DAO"));
+            Database.SetInitializer<BlogContext>(null);
+            base.OnModelCreating(modelBuilder);
         }
 
         public override int SaveChanges()
