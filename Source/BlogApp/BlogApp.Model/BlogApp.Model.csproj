@@ -49,6 +49,7 @@
     <Compile Include="FeatureManagement\TaskType.cs" />
     <Compile Include="FeatureManagement\TestCase.cs" />
     <Compile Include="FeatureManagement\TestCaseStatus.cs" />
+    <Compile Include="MenuManagement\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

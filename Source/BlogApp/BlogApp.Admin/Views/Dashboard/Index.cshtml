@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BlogApp.Model.MenuManagement.Menu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@foreach (var menu in Model)
+{
+    @Html.DisplayFor(modelItem => menu.MenuName)
+}

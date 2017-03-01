@@ -14,5 +14,6 @@ namespace BlogApp.Common.Database
         public const string TaskType = "TaskType";
         public const string TestCase = "TestCase";
         public const string TestCaseStatus = "TestCaseStatus";
+        public const string Menu = "Menu";
     }
 }
