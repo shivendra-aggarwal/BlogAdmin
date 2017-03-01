@@ -13,7 +13,7 @@ namespace BlogApp.Model.MenuManagement
 
         public string MenuTitle { get; set; }
 
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
 
         public int MenuOrder { get; set; }
     }
