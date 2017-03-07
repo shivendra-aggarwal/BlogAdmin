@@ -39,7 +39,7 @@ namespace BlogApp.Business.Services
             _unitOfWork.Commit();
         }
 
-        public IList<T> GetAll()
+        public virtual IList<T> GetAll()
         {
             return _repository.FindAll();
         }

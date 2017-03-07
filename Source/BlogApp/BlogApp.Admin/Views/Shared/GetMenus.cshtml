@@ -1,0 +1,5 @@
+﻿@model IEnumerable<BlogApp.Model.MenuManagement.Menu>
+
+
+@Html.GetMenuBar(Model, @HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString())
+            

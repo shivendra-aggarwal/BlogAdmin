@@ -22,5 +22,22 @@ namespace BlogApp.Business.Services
             _unitOfWork = unitOfWork;
             _repository = repository;
         }
+
+        public override IList<Menu> GetAll()
+        {
+            List<Menu> menus = base.GetAll().ToList();
+
+            menus.Where(menu => menu.ParentId == null).OrderBy(menu => menu.MenuOrder).ToList().ForEach(menu =>
+                {
+                    List<Menu> childMenus = menus.Where(child => child.ParentId == menu.Identifier).ToList();
+                    if (childMenus != null && childMenus.Count > 0)
+                    {
+                        menu.ChildMenus = new List<Menu>();
+                        menu.ChildMenus.AddRange(childMenus);
+                    }
+                });
+
+            return menus.Where(menu => menu.ParentId == null).ToList();
+        }
     }
 }

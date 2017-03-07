@@ -16,6 +16,8 @@ namespace BlogApp.DAO.Configurations
             ToTable(Table.Menu);
 
             HasKey(t => t.Identifier);
+
+            Ignore(t => t.ChildMenus);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using BlogApp.Business.Interfaces;
+﻿using BlogApp.Admin.CommonControllers;
+using BlogApp.Business.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,11 @@ using System.Web.Mvc;
 
 namespace BlogApp.Admin.Controllers
 {
-    public class DashboardController : Controller
+    public class DashboardController : BaseController
     {
         IMenuService _menuService;
-
         public DashboardController(IMenuService menuService)
+            : base("Dashboard")
         {
             _menuService = menuService;
         }
@@ -19,7 +20,14 @@ namespace BlogApp.Admin.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            return View(_menuService.GetAll());
+            return View();
         }
+
+
+        //[ChildActionOnly]
+        //public ActionResult GetMenus()
+        //{
+        //    return PartialView(_menuService.GetAll());
+        //}
     }
 }
