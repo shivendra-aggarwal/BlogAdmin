@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2DAFDF79-5D8C-4BAB-85DC-239CC8ED3F04}</ProjectGuid>
+    <ProjectGuid>{7A8FAB45-A101-44CB-8DB3-D5B39D10F7E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BlogApp.Business</RootNamespace>
-    <AssemblyName>BlogApp.Business</AssemblyName>
+    <RootNamespace>BlogApp.DAO.Interfaces</RootNamespace>
+    <AssemblyName>BlogApp.DAO.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,10 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,26 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IFeatureService.cs" />
-    <Compile Include="Interfaces\IMenueService.cs" />
-    <Compile Include="Interfaces\IFeatureTypeService.cs" />
-    <Compile Include="Interfaces\IGenericService.cs" />
-    <Compile Include="Interfaces\IService.cs" />
+    <Compile Include="IBlogAppContext.cs" />
+    <Compile Include="IFeatureRepository.cs" />
+    <Compile Include="IFeatureTypeRepository.cs" />
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="IMenuRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FeatureService.cs" />
-    <Compile Include="Services\MenuService.cs" />
-    <Compile Include="Services\FeatureTypeService.cs" />
-    <Compile Include="Services\GenericService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BlogApp.DAO.Interfaces\BlogApp.DAO.Interfaces.csproj">
-      <Project>{7a8fab45-a101-44cb-8db3-d5b39d10f7e1}</Project>
-      <Name>BlogApp.DAO.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BlogApp.DAO\BlogApp.DAO.csproj">
-      <Project>{E8587076-5369-4954-BEF6-88221489C777}</Project>
-      <Name>BlogApp.DAO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BlogApp.Model\BlogApp.Model.csproj">
       <Project>{9e15054b-70fd-4899-87ab-6f277e0c2075}</Project>
       <Name>BlogApp.Model</Name>

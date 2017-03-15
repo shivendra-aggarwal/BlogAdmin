@@ -53,11 +53,6 @@
     <Compile Include="Configurations\FeatureConfiguration.cs" />
     <Compile Include="Configurations\FeatureTypeConfiguration.cs" />
     <Compile Include="Configurations\MenuConfiguration.cs" />
-    <Compile Include="Interfaces\IBlogAppContext.cs" />
-    <Compile Include="Interfaces\IFeatureRepository.cs" />
-    <Compile Include="Interfaces\IMenuRepository.cs" />
-    <Compile Include="Interfaces\IFeatureTypeRepository.cs" />
-    <Compile Include="Interfaces\IGenericRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Repositories\FeatureTypeRepository.cs" />
     <Compile Include="UnitOfWork\Interface\IUnitOfWork.cs" />
@@ -75,6 +70,10 @@
     <ProjectReference Include="..\BlogApp.Common\BlogApp.Common.csproj">
       <Project>{32bc3e2f-a435-4125-a0f2-f6321f98625a}</Project>
       <Name>BlogApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlogApp.DAO.Interfaces\BlogApp.DAO.Interfaces.csproj">
+      <Project>{7a8fab45-a101-44cb-8db3-d5b39d10f7e1}</Project>
+      <Name>BlogApp.DAO.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlogApp.Model\BlogApp.Model.csproj">
       <Project>{9e15054b-70fd-4899-87ab-6f277e0c2075}</Project>
