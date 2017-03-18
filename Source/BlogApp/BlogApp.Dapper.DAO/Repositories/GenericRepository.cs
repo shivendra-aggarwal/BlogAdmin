@@ -33,9 +33,9 @@ namespace BlogApp.Dapper.DAO.Repositories
 
         public TEntity Create(TEntity obj)
         {
-            using (IDbConnection cn = Connection)
+            using (IDbConnection con = Connection)
             {
-                obj = cn.Insert<TEntity>(_tableName, obj);
+                obj = con.Insert<TEntity>(_tableName, obj);
             }
 
             return obj;
@@ -48,7 +48,15 @@ namespace BlogApp.Dapper.DAO.Repositories
 
         public IList<TEntity> FindAll()
         {
-            throw new NotImplementedException();
+            IList<TEntity> list = null;
+
+            using (IDbConnection con = Connection)
+            {
+                con.Open();
+                list = con.Query<TEntity>(string.Format("SELECT * FROM {0}", _tableName)).ToList();
+            }
+
+            return list;
         }
 
         public IList<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate)

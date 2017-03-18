@@ -11,7 +11,7 @@ namespace BlogApp.Admin.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyTypes(Assembly.Load("BlogApp.DAO"))
+            builder.RegisterAssemblyTypes(Assembly.Load("BlogApp.Dapper.DAO"))
                 .Where(t => t.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
