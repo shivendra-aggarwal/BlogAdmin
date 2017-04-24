@@ -179,7 +179,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="CommonControllers\BaseController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
-    <Compile Include="Controllers\FeatureTypeController.cs" />
+    <Compile Include="Controllers\FeaturesController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -232,6 +232,7 @@
     <Content Include="Views\FeatureType\Index.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Shared\GetMenus.cshtml" />
+    <Content Include="Views\Features\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

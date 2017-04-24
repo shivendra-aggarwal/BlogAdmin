@@ -1,4 +1,5 @@
-﻿using BlogApp.DAO.Interfaces;
+﻿using BlogApp.Business.Interfaces;
+using BlogApp.DAO.Interfaces;
 using BlogApp.DAO.UnitOfWork.Interface;
 using BlogApp.Model.FeatureManagement;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Business.Services
 {
-    public class FeatureService : GenericService<Feature>
+    public class FeatureService : GenericService<Feature>, IFeatureService
     {
         private IUnitOfWork _unitOfWork;
         private IFeatureRepository _repository;

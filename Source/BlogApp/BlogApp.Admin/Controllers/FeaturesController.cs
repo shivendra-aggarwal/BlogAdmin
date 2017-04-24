@@ -8,20 +8,20 @@ using System.Web.Mvc;
 
 namespace BlogApp.Admin.Controllers
 {
-    public class FeatureTypeController : BaseController
+    public class FeaturesController : BaseController
     {
-        IFeatureTypeService _featureTypeService;
+        IFeatureService _featureService;
 
-        public FeatureTypeController(IFeatureTypeService featureTypeService)
-            : base("FeatureType")
+        public FeaturesController(IFeatureService featureService)
+            : base("Feature")
         {
-            _featureTypeService = featureTypeService;
+            _featureService = featureService;
         }
 
         // GET: FeatureType
         public ActionResult Index()
         {
-            return View(_featureTypeService.GetAll());
+            return View(_featureService.GetAll());
         }
     }
 }
