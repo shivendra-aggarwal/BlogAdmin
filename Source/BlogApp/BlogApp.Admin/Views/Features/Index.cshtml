@@ -1,111 +1,72 @@
-﻿@model IEnumerable<BlogApp.Model.FeatureManagement.Feature>
+﻿@model IEnumerable<BlogApp.Admin.ViewModels.FeatureViewModel>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Identifier)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FeatureName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FeatureDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsCompleted)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompletedOn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartedOn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsActive)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DocUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FeatureTypeId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProjectId)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Identifier)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FeatureName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FeatureDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsCompleted)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompletedOn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartedOn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DocUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FeatureTypeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProjectId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Features <a href="/Features/Create"><span class="glyphicon glyphicon-plus"></span></a> </div> 
+    
+    <div class="panel-body">
+        <p>This page contains list of features that we are going to incorporate in this portal soon.</p>
+    </div>
+    
+    @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.FeatureViewModel>(Model))
+    
+    <!--
+    <table class="table table-bordered table-hover table-striped table-responsive">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FeatureName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeatureDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCompleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompletedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeatureName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeatureDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsCompleted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompletedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
+    </table>-->
+</div>
+
+
+

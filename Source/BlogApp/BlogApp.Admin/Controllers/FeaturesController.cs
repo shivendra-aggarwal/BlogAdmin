@@ -1,4 +1,5 @@
 ﻿using BlogApp.Admin.CommonControllers;
+using BlogApp.Admin.ViewModels;
 using BlogApp.Business.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace BlogApp.Admin.Controllers
         // GET: FeatureType
         public ActionResult Index()
         {
-            return View(_featureService.GetAll());
+            return View(FeatureViewModel.GetListOfViewModel(_featureService.GetAll().ToArray()));
         }
     }
 }

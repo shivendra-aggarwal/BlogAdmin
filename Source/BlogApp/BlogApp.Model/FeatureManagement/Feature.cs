@@ -28,5 +28,9 @@ namespace BlogApp.Model.FeatureManagement
         public int FeatureTypeId { get; set; }
 
         public int ProjectId { get; set; }
+
+        public FeatureType FeatureType { get; set; }
+
+        
     }
 }
