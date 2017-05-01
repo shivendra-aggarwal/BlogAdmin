@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BlogApp.Admin.ViewModels.TestDataViewModel>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Modules for Test Data  </div>
+
+    <div class="panel-body">
+        <p>This page contains list of modules of which we are going to generate test data.</p>
+    </div>
+
+    @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.TestDataViewModel>(Model))
+
+    
+</div>

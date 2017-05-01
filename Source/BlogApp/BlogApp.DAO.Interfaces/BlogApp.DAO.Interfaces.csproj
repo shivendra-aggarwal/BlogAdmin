@@ -46,6 +46,7 @@
     <Compile Include="IFeatureTypeRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
     <Compile Include="IMenuRepository.cs" />
+    <Compile Include="ITestDataRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

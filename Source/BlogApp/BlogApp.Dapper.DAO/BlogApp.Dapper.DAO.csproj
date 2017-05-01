@@ -50,6 +50,7 @@
     <Compile Include="Repositories\FeatureTypeRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\TestDataRepository.cs" />
     <Compile Include="Utilities\DapperExtensions.cs" />
     <Compile Include="Utilities\DynamicQuery.cs" />
   </ItemGroup>

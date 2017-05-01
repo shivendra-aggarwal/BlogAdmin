@@ -18,6 +18,15 @@ namespace BlogApp.Admin.ViewModels
             return destinations;
         }
 
+        public static TDestination GetViewModel(TSource source)
+        {
+            IMapper mapper = GetMapper();
+
+            TDestination destination = mapper.Map<TSource, TDestination>(source);
+
+            return destination;
+        }
+
         private static IMapper GetMapper()
         {
             var mapperConfiguration = new MapperConfiguration(config => {
