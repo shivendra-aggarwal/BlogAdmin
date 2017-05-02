@@ -27,7 +27,7 @@ namespace BlogApp.Admin.ViewModels
             return destination;
         }
 
-        private static IMapper GetMapper()
+        protected static IMapper GetMapper()
         {
             var mapperConfiguration = new MapperConfiguration(config => {
                 config.CreateMap<TSource, TDestination>();
