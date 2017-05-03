@@ -57,6 +57,10 @@
     <Compile Include="Services\TestDataService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BlogApp.Common\BlogApp.Common.csproj">
+      <Project>{32BC3E2F-A435-4125-A0F2-F6321F98625A}</Project>
+      <Name>BlogApp.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BlogApp.DAO.Interfaces\BlogApp.DAO.Interfaces.csproj">
       <Project>{7a8fab45-a101-44cb-8db3-d5b39d10f7e1}</Project>
       <Name>BlogApp.DAO.Interfaces</Name>

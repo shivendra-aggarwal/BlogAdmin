@@ -6,9 +6,13 @@
 
     <div class="panel-body">
         <p>This page contains list of modules of which we are going to generate test data.</p>
+        <button class="btn btn-primary pull-right" title="">Clear Previous Data</button>
     </div>
 
     @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.TestDataViewModel>(Model))
 
-    
+    <div class="col-md-12 text-center well">
+        <button class="btn btn-primary" title="">Generate</button>
+        <button class="btn btn-primary" title="">Reset</button>
+    </div>
 </div>

@@ -1,7 +1,8 @@
 ﻿using BlogApp.Business.Interfaces;
+using BlogApp.Common.Database;
 using BlogApp.DAO.Interfaces;
 using BlogApp.DAO.UnitOfWork.Interface;
-using BlogApp.Model.TestData;
+using Model = BlogApp.Model.TestData;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Business.Services
 {
-    public class TestDataService : GenericService<Table>, ITestDataService
+    public class TestDataService : GenericService<Model.TestData.Table>, ITestDataService
     {
         IUnitOfWork _unitOfWork;
         ITestDataRepository _repository;
@@ -22,9 +23,22 @@ namespace BlogApp.Business.Services
             _repository = repository;
         }
 
-        public IList<Table> GetAllSystemTables()
+        public IList<Model.TestData.Table> GetAllSystemTables()
         {
-            return _repository.FindAllSystemTables();
+            IList<Model.TestData.Table> tables = _repository.FindAllSystemTables();
+            return tables.Where(table => !this.GetAllMasterTablesToExcludeFromImport().Contains(table.TableName)).ToList();
+        }
+
+
+        private IList<string> GetAllMasterTablesToExcludeFromImport()
+        {
+            return new List<string>()
+            {
+                MasterTable.FeatureType,
+                MasterTable.Menu,
+                MasterTable.VersionInfo
+            };
+
         }
     }
 }
