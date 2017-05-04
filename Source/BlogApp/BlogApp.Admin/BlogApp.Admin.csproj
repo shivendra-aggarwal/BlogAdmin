@@ -191,6 +191,7 @@
     </Compile>
     <Compile Include="HTMLHelpers\GridHelper.cs" />
     <Compile Include="HTMLHelpers\MenuHelper.cs" />
+    <Compile Include="HTMLHelpers\PageHeaderHelper.cs" />
     <Compile Include="Modules\DAOModule.cs" />
     <Compile Include="Modules\EFModule.cs" />
     <Compile Include="Modules\ServiceModule.cs" />
@@ -214,6 +215,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jqBootstrapValidation.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -243,6 +245,7 @@
     <Content Include="Views\Shared\GetMenus.cshtml" />
     <Content Include="Views\Features\Index.cshtml" />
     <Content Include="Views\TestData\GetModules.cshtml" />
+    <Content Include="Views\Features\AddFeature.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

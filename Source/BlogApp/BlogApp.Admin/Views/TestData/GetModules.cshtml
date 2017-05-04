@@ -1,18 +1,22 @@
 ﻿@model IEnumerable<BlogApp.Admin.ViewModels.TestDataViewModel>
 
+@Html.GetPageHeader("Get Test Data!", "Generate test entries for all modules of the system in one click...")
+
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">Modules for Test Data  </div>
 
     <div class="panel-body">
-        <p>This page contains list of modules of which we are going to generate test data.</p>
-        <button class="btn btn-primary pull-right" title="">Clear Previous Data</button>
-    </div>
+        <p>
+            This page contains list of modules of which we are going to generate test data.
+        </p>
 
-    @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.TestDataViewModel>(Model))
+        @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.TestDataViewModel>(Model))
 
-    <div class="col-md-12 text-center well">
-        <button class="btn btn-primary" title="">Generate</button>
-        <button class="btn btn-primary" title="">Reset</button>
+        <div class="col-md-12 text-center well">
+            <button class="btn btn-primary" title="">Generate</button>
+            <button class="btn btn-primary" title="">Reset</button>
+            <button class="btn btn-primary" title="">Clear Previous Data</button>
+        </div>
     </div>
 </div>

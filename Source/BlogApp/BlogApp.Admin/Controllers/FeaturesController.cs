@@ -24,5 +24,10 @@ namespace BlogApp.Admin.Controllers
         {
             return View(FeatureViewModel.GetListOfViewModel(_featureService.GetAll().ToArray()));
         }
+
+        public ActionResult AddFeature()
+        {
+            return View();
+        }
     }
 }

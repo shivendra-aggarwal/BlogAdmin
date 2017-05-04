@@ -1,71 +1,16 @@
 ﻿@model IEnumerable<BlogApp.Admin.ViewModels.FeatureViewModel>
 
+@Html.GetPageHeader("Features!")
 
 <div class="panel panel-default">
     <!-- Default panel contents -->
-    <div class="panel-heading">Features <a href="/Features/Create"><span class="glyphicon glyphicon-plus"></span></a> </div> 
-    
+    <div class="panel-heading">Features <a href="/Features/AddFeature"><span class="glyphicon glyphicon-plus"></span></a> </div>
+
     <div class="panel-body">
         <p>This page contains list of features that we are going to incorporate in this portal soon.</p>
+
+        @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.FeatureViewModel>(Model))
     </div>
-    
-    @(@Html.GetSimpleGrid<BlogApp.Admin.ViewModels.FeatureViewModel>(Model))
-    
-    <!--
-    <table class="table table-bordered table-hover table-striped table-responsive">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FeatureName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FeatureDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsCompleted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CompletedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsActive)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FeatureName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FeatureDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsCompleted)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CompletedOn)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StartedOn)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsActive)
-                </td>
-                
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
-        }
-
-    </table>-->
 </div>
 
 
