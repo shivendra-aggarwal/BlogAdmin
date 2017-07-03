@@ -112,3 +112,8 @@ UpgradeLog*.XML
 
 
 .vs/
+
+
+node_modules
+
+bower_components
